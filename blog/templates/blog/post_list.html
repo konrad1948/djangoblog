@@ -9,16 +9,16 @@
         <h1> Witam serdecznie Panów Automatyków!</h1>
         <h2> W jaki sposób dziś zmieniacie KK?</h2>
     </div>
+
+    {% for post in posts %}
     <div>
-        <p>To jest akapit</p>
-        <em>ADSFDSAFA</em><br>
-        <strong>Link do mojego github</strong><br>
-        <a href="https://github.com/konrad1948">LINK</a>
+        <p>opublikowany: {{post.publish_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <em>{{ post.text|linebreaksbr }}</em>
     </div>
+    {% endfor %}
     <div>
-        <ul>
-        <li>Elementy listy</li>
-        </ul>
+
     </div>
 </body>
 </html>
